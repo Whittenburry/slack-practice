@@ -28,6 +28,10 @@
   <script type="text/javascript">
      const SendPostView = require("send-post-view")
 
+     const MessageHistoryView = require("message-history-view")
+     const idunno = new MessageHistoryView()
+     idunno.getHistory()
+
      const poster = document.querySelector(".send-post")
      new SendPostView(poster)
   </script>
