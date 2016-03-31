@@ -35,7 +35,7 @@ export default class SendPostView {
       <input class='post-message' type='text' placeholder='Message'>
       <input class='post-room' type='text' placeholder='Room Name'>
       <button>Post</button>`
-      
+
     this.listenForClick();
   }
 }

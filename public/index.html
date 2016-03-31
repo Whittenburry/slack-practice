@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>slack-practice</title>
+  <title>Slack-Practice</title>
   <link rel="stylesheet" href="/app.css">
 </head>
 <body>
@@ -10,23 +10,28 @@
   <script src="/vendor.js" charset="utf-8"></script>
   <script src="/app.js" charset="utf-8"></script>
 
-  <div class="sidebar">
-    <div class="send-post">
-      <h1>Send Post</h1>
+  <div class="outer-container">
+    <div class="sidebar">
+      <div class="send-post">
+        <h1>Send Post</h1>
+      </div>
+      <div class="set-topic">
+        <h1>Set Topic</h1>
+      </div>
     </div>
 
-    <div class="set-topic">
-      <h1>Set Topic</h1>
+    <div class="main">
+      <h1>Message History</h1>
     </div>
-  </div>
-
-  <div class="main">
-    <h1>Message History</h1>
   </div>
 
   <script type="text/javascript">
      const SendPostView = require("send-post-view")
-     
+
+     const MessageHistoryView = require("message-history-view")
+     const idunno = new MessageHistoryView()
+     idunno.getHistory()
+
      const poster = document.querySelector(".send-post")
      new SendPostView(poster)
   </script>

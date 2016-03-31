@@ -1,0 +1,19 @@
+.outer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 70rem;
+
+  margin: auto;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 30rem;
+
+  padding-left: 1rem;
+}

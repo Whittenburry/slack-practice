@@ -1,7 +1,7 @@
-import token from 'slack-token'
+import token from 'slack-token';
 
-function findIdForChannel(channelName) {
-  console.log("looking for", channelName)
+function findIdForChannel(searchName) {
+  console.log("looking for", searchName)
 
   const url = `
     https://slack.com/api/channels.list?
@@ -11,10 +11,10 @@ function findIdForChannel(channelName) {
     .then(res => res.json())
     .then(json => {
       let match
-
-      json.channels.forEach(chan => {
-        if (chan.name == channelName) {
-          match = chan
+      console.log('token is', token)
+      json.channels.forEach(i => {
+        if (i.name == searchName) {
+          match = i
         }
       })
 
